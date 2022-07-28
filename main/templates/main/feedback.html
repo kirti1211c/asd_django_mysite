@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Feedback
+{% endblock %}
+
+{% block content %}
+<h1>{{ans}}</h1>
+<!-- {% if not id == -1 %} -->
+<h3>
+    {{feed}}
+</h3>
+<form method="get" action="/{{id}}">
+    {% csrf_token %}
+    <button type="submit" name="getidbutton">Next Question</button>
+</form>
+<!-- {% else %}
+<form method="get" action="/">
+    {% csrf_token %}
+    <button type="submit" name="getidbutton">Next Question</button>
+</form>
+{% endif %} -->
+{% endblock %}

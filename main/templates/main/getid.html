@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Id
+{% endblock %}
+
+{% block content %}
+<h1> {{ques}}</h1>
+
+{% if id > 50 %}
+
+<img src={{img_url}} alt="emotion">
+{% endif %}
+<form method="post" action="/feedback/{{id}}">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="getidbutton">Submit my answer</button>
+</form>
+{% endblock %}

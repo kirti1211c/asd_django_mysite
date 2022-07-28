@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block content %}
+<h1> Home page</h1>
+<form method="get" action="/1">
+    {% csrf_token %}
+    <button type="submit" name=" next">Go to Ques</button>
+</form>
+{% endblock %}
